@@ -8,9 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v1
-
-      - name: dependency setting
-        run: make install
-        
-      - name: eslint chek
-        run: make lint
+        with:
+          node-version: '17'
+      - run: make install
+      - run: make lint
