@@ -10,5 +10,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '17'
-      - run: make install
-      - run: make lint
+          
+      - name: Dependency setting
+        run: make install
+      - name: Run linter
+        run: make lint
