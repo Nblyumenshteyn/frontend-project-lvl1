@@ -1,16 +1,15 @@
-import _ from 'lodash';
 import readlineSync from 'readline-sync';
 
-export function general(question, getDate) {
+export default function general(task, getDate) {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   const newUserName = userName[0].toUpperCase() + userName.slice(1).toLowerCase();
   console.log(`Hello, ${newUserName}!`);
 
-  question();
+  task();
   const countCalculations = 3;
 
-  for (let i = 1; i <= countCalculations; i = i + 1) {
+  for (let i = 1; i <= countCalculations; i += 1) {
     const { question, correctAnswer } = getDate();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');

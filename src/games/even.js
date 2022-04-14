@@ -1,14 +1,10 @@
-#!/usr/bin/env node
-// import _ from 'lodash';
-import { general } from "../index.js";
+import general from '../index.js';
 
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
-export function question() {
+export function task() {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 }
 
@@ -25,6 +21,6 @@ export function getDate() {
   return { question, correctAnswer };
 }
 
-const even = () => general(question, getDate);
+const even = () => general(task, getDate);
 
 export default even;
