@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import _ from 'lodash';
+// import _ from 'lodash';
 import { general } from "../index.js";
 
 function getRandomInt(min, max) {
