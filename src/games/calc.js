@@ -30,7 +30,6 @@ export function getDate() {
   let operator = arr[Math.floor(Math.random() * arr.length)];
   const question = `${num1} ${operator} ${num2}`;
   const correctAnswer = result(operator, num1, num2);
-  console.log(correctAnswer);
 
   return { question, correctAnswer };
 }
