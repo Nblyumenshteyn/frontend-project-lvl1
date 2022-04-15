@@ -27,7 +27,7 @@ export function getDate() {
   const arr = ['+', '-', '*'];
   const operator = arr[Math.floor(Math.random() * arr.length)];
   const question = `${num1} ${operator} ${num2}`;
-  const correctAnswer = result(operator, num1, num2);
+  const correctAnswer = String(result(operator, num1, num2));
 
   return { question, correctAnswer };
 }

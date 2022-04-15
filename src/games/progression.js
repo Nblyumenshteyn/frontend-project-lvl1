@@ -20,10 +20,12 @@ export function getDate() {
   }
 
   const correctAnswer = result[Math.floor(Math.random() * result.length)];
-  const index = result.indexOf(correctAnswer);
-  result[index] = '..';
-  const question = result.toString();
-  return { question, correctAnswer };
+  const indexCorrectAnswer = result.indexOf(correctAnswer);
+  result[indexCorrectAnswer] = '..';
+  const regular = /,/g;
+  const question = result.toString().replace(regular, ' ');
+  const correctAnswerStr = String(correctAnswer);
+  return { question, correctAnswer: correctAnswerStr };
 }
 
 const progression = () => general(task, getDate);
