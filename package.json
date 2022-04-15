@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Nblyumenshteyn/frontend-project-lvl1#readme",
   "bin": {
+    "code": "bin/brain-games.js",
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
@@ -32,7 +33,6 @@
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^26.1.4"
+    "eslint-plugin-import": "^2.26.0"
   }
 }
