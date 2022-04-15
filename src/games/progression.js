@@ -12,8 +12,9 @@ export function getDate() {
   const num1 = getRandomInt(1, 10);
   const num2 = getRandomInt(1, 10);
   const result = [num1];
+  const arrSize = 8;
 
-  for (let i = 0; i <= 9; i += 1) {
+  for (let i = 0; i <= arrSize; i += 1) {
     const newEl = result[i] + num2;
     result.push(newEl);
   }

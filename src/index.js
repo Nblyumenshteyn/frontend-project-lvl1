@@ -11,7 +11,6 @@ export default function general(task, getDate) {
 
   for (let i = 1; i <= countCalculations; i += 1) {
     const { question, correctAnswer } = getDate();
-    console.log(question);
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer == correctAnswer) {
