@@ -1,18 +1,21 @@
----
-  
 plugins:
-  # https://github.com/jest-community/eslint-plugin-jest
   - jest
-
-# https://eslint.org/docs/user-guide/configuring#specifying-environments
+  - react
+  
 env:
+  browser: true
+  es2021: true
   node: true
 
 extends:
-  - 'airbnb-base'
+  - airbnb-base
+  - plugin:react/recommended
 
 parserOptions:
-  ecmaVersion: latest
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 13
+  sourceType: module
 
 rules:
   no-console: 0
