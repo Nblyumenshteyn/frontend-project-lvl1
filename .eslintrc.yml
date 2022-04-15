@@ -1,7 +1,11 @@
+---
+
 plugins:
+  # https://github.com/jest-community/eslint-plugin-jest
   - jest
   - react
 
+# https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
   browser: true
   es2021: true
@@ -12,10 +16,12 @@ extends:
   - plugin:react/recommended
 
 parserOptions:
-  ecmaFeatures:
-    jsx: true
-  ecmaVersion: 13
-  sourceType: module
+  ecmaVersion: latest
+# parserOptions:
+#   ecmaFeatures:
+#     jsx: true
+#   ecmaVersion: 13
+#   sourceType: module
 
 rules:
   no-console: 0
